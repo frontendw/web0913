@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       /* 몇 번째 요소를 선택할 것인가? */
+       /* 
+            first-of-type: 첫 번째 요소
+            last-of-type: 마지막 번재 요소
+            nth-of-type(n): n 번째 (n=1,2,3,4,...)
+            nth-of-type(even): 짝수 번째
+            nth-of-type(odd): 홀수 번째
+            nth-of-type(2n): 짝수 번째
+            nth-of-type(2n+1): 홀수 번째 (n=0,1,2,3,...)
+            nth-of-type(2n-1): 홀수 번째 (n=1,2,3,...)
+            nth-of-type(3n): 3의 배수 번째 -> 3 * n (n=1,2,3,...)
+       */
+       p:nth-of-type(1) {font-style: italic;}
+       p:nth-of-type(2n) {background-color: pink;}
+       p:nth-of-type(2n-1) {background-color: cyan;}
+       p:nth-of-type(5) {font-style: italic;}
+    </style>
+</head>
+<body>
+    <h1>nth-of-type(n)</h1>
+    <p>nth-of-type(숫자)</p>
+    <p>nth-of-type(even)</p>
+    <p>nth-of-type(odd)</p>
+    <p>nth-of-type(2n)</p>
+    <p>nth-of-type(2n+1)</p>
+</body>
+</html>

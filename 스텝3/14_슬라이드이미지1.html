@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        body {margin: 0;}
+        ul {list-style: none; margin: 0; padding: 0;}
+        img {vertical-align: top;}
+
+        /* slide */
+        #slide {position:relative; 
+            width:120px; height:120px; /* 이미지 크기 */
+            overflow:hidden;
+        }
+        ul {position:absolute;left:0; top:0;width:400%;
+            animation: slide 9s infinite;
+        }
+        li {float:left;}
+
+        @keyframes slide {
+            0% {left:0;}
+            5% {left:-100%;}
+            33% {left:-100%;}
+            38% {left:-200%;}
+            66% {left:-200%;}
+            71% {left:-300%;}
+            99% {left:-300%;}
+            99.99% {left:-300%;}
+            100% {left:0;}
+        }
+    </style>
+</head>
+<body>
+    <div id="slide">
+        <ul>
+            <li><img src="/assets/gallery1.jpg" alt="슬라이드 이미지1"></li>
+            <li><img src="/assets/gallery2.jpg" alt="슬라이드 이미지2"></li>
+            <li><img src="/assets/gallery3.jpg" alt="슬라이드 이미지3"></li>
+            <li><img src="/assets/gallery1.jpg" alt="슬라이드 이미지1"></li>
+        </ul>
+    </div>
+</body>
+</html>

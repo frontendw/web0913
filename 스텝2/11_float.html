@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        div {width: 150px; height: 100px; background:yellow;}
+        .div1 {float:left;}
+        .div2 {float:right;}
+        .clearFix {clear: both;}
+    </style>
+</head>
+<body>
+    <h1>플로팅</h1>
+    <p>CSS의 float는 가로 배치 속성으로 left, right 등으로 지정한다.</p>
+    <p>CSS의 clear는 가로 배치 제거 속성으로 both 등으로 지정한다.</p>
+
+    <h2>left</h2>
+    <div class="div1">박스1</div>
+    <div class="div1">박스2</div>
+    <div class="div1">박스3</div>
+
+    <!-- 카멜표기법: 단어의 첫 글자를 대문자(단, 첫 단어는 소문자로) -->
+    <h2 class="clearFix">right</h2>
+    <div class="div2">박스4</div>
+    <div class="div2">박스5</div>
+    <div class="div2">박스6</div>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        body {margin:0;}
+        #wrapper {
+            width:1500px;
+            /* 블록레벨요소를 가로 가운데 배치 */
+            /* auto는 width를 제외한 남은 공간을 균등 분배한다. */
+            margin:0 auto;
+        }
+        #header {height:56px; background:red;}
+        #section {height:500px; background:green;}
+        #footer {height:85px; background:blue;}
+    </style>
+</head>
+<body>
+    <!-- <div id="wrapper">
+        <div id="header">헤더</div>
+        <div id="section">섹션</div>
+        <div id="footer">푸터</div>
+    </div> -->
+
+    <!-- div가 header, section, footer로 세분화 되었다. -->
+    <!-- 시멘틱(의미있는) 요소: header, section, footer, ... -->
+
+    <!-- 전체 콘텐츠를 가로 가운데 배치 -->
+    <div id="wrapper">
+        <header id="header">헤더</header>
+        <section id="section">섹션</section>
+        <footer id="footer">푸터<footerr>
+    </div>
+</body>
+</html>

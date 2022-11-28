@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 내부 CSS -->
+    <style>
+        /* 
+            background-color: 색;
+
+            background-image: url(경로/이미지1), url(경로/이미지2), ...;
+                - 기본값: none
+                - 이미지1가 이미지2보다 위로 배치
+
+            background-repeat: repeat|no-repeat|repeat-x|repeat-y;
+
+            background-position: x위치 [y위치];
+                - 기본값: 0% 0%
+                - y위치를 생략하면 50%
+                - 단위: px, %
+                - x위치: left(0%), right(100%), center(50%)
+                - y위치: top(0%), bottom(100%), center(50%)
+
+            background-size: 가로크기 [세로크기];
+                - 기본값: auto
+                - cover: 가득 채운다. 
+                - contain: 잘리지 않는다.
+                - 단위: px, %
+                - px, %를 사용할 경우 가로 크기를 지정하여
+                  세로 크기가 비례적으로 자동 지정되게 한다.
+
+            background-attachment: scroll|fixed;
+
+            속기형
+            background: 색|이미지 [위치][/크기] [반복] [고정];
+                - 크기를 지정하려면 위치와 함께 지정한다.
+        */
+        .bg {
+            height: 500px;
+            /* background-color: pink;
+            background-image: url(/assets/bg-main0-5.png), url(/assets/parallax1.jpg);
+            background-position: 0%;
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-attachment: fixed; */
+
+            background: pink 0/10% no-repeat fixed;
+            background-image:url(/assets/bg-main0-5.png), url(/assets/parallax1.jpg);
+            background-position: left, center;
+        }
+        .blank {
+            height: 1000px;
+            text-indent: -99999px;
+        }
+    </style>
+</head>
+<body>
+    <h1>background</h1>
+    <ul>
+        <!-- 선택한 영역 복제: shift+alt+위/아래방향키 -->
+        <li>background-color: 배경색</li>
+        <li>background-image: 배경이미지</li>
+        <li>background-repeat: 배경이미지 반복</li>
+        <li>background-position: 배경이미지 위치</li>
+        <li>background-size: 배경이미지 크기</li>
+        <li>background-attachment: 배경이미지 고정</li>
+        <li>background: 색|이미지 [반복] [위치][/크기] [고정]</li>
+    </ul>
+    <div class="bg">내용</div>
+    <div class="blank">빈 박스</div>
+</body>
+</html>

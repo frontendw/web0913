@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 가운데 제목</title>
+    <style>
+        * {margin:0;}
+        div {
+            position:relative;
+            width:500px; height:400px;
+            background:yellow;
+        }
+        h2 {
+            position:absolute;
+            left:50%; top:50%;
+            width:100px; height:40px;
+            /* width의 1/2 크기만큼 왼쪽으로 이동(음수) */
+            /* height의 1/2 크기만큼 위쪽으로 이동(음수) */
+            margin-left: -50px;
+            margin-top: -20px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>제목</h2>
+    </div>
+</body>
+</html>

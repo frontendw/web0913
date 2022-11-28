@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        p:nth-of-type(2) {text-align: left;}
+        p:nth-of-type(3) {text-align: right;}
+        p:nth-of-type(4) {text-align: center;}
+        p:nth-of-type(5) {
+            text-align: justify;
+        }
+        p:nth-of-type(6) {
+            text-align: justify;
+            word-break: break-all;
+        }
+
+        /* 
+            상속(inherit): 부모의 속성이 자식에게도 그대로 적용
+            text-align 속성은 상속 받고 있다.
+            부모: div
+            자식: span
+        */
+        div {
+            border:1px solid red; 
+            text-align:center;
+            height:130px;
+        }
+        span {
+            display:inline-block;
+            width: 100px;
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>text-align</h1>
+    <p>텍스트(인라인 요소)의 가로 정렬 속성으로 값은 left, right, center, justify(양쪽 맞춤)가 있다.</p>
+
+    <!-- 공간이 부족하면 자동 줄바꿈된다. -->
+    <p>Lorem ipsum dolor sit amet consectetur, 
+        adipisicing elit. Natus molestias
+         ad quibusdam saepe doloribus corrupti 
+         reprehenderit beatae corporis. 
+         Sint animi possimus provident 
+         repellendus repellat hic quibusdam. 
+         Asperiores beatae earum consectetur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias ad quibusdam saepe doloribus corrupti reprehenderit beatae corporis. Sint animi possimus provident repellendus repellat hic quibusdam. Asperiores beatae earum consectetur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias ad quibusdam saepe doloribus corrupti reprehenderit beatae corporis. Sint animi possimus provident repellendus repellat hic quibusdam. Asperiores beatae earum consectetur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias ad quibusdam saepe doloribus corrupti reprehenderit beatae corporis. Sint animi possimus provident repellendus repellat hic quibusdam. Asperiores beatae earum consectetur?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus molestias ad quibusdam saepe doloribus corrupti reprehenderit beatae corporis. Sint animi possimus provident repellendus repellat hic quibusdam. Asperiores beatae earum consectetur?</p>
+
+    <div>
+        <span>박스</span>
+        <span>박스</span>
+        <span>박스</span>
+    </div>
+</body>
+</html>

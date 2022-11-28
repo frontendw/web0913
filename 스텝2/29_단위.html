@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {font-size:10px;}
+        body {font-size: 10px;}
+        .div1 {font-size: 2em;}
+        .div2 {font-size: 2rem;}
+        .div1 h1 {
+            /* 부모 글자 크기의 2배 */
+            font-size: 2em;
+        }
+        .div1 p {font-size: 1em;}
+
+        .div2 h1 {
+            /* html 태그에서 지정한 크기의 2배 */
+            font-size: 2rem;
+        }
+        .div2 p {font-size: 1rem;}
+    </style>
+</head>
+<body>
+    <h1>단위: 20px=2em</h1>
+    <p>16px(픽셀), %, em, rem, vw, vh, vmin, vmax 등이 있다.</p>
+    <p>em(엠)은 부모에서 지정한 크기의 배수 단위이다.</p>
+    <p>rem은 html 태그에 지정한 크기의 배수 단위이다.</p>
+
+    <div class="div1">
+        <h1>나는 40px 이다.</h1>
+        <p>나는 20px 이다.</p>
+    </div>
+
+    <div class="div2">
+        <h1>나는 20px 이다.</h1>
+        <p>나는 10px 이다.</p>
+    </div>
+</body>
+</html>

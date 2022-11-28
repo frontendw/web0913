@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {list-style:none;}
+        li {
+            width:200px;
+            height:200px;
+            margin: 20px;
+            outline:1px dotted red;
+            /* 부모 요소에 지정한다. */
+            perspective: 700px;
+        }
+        span {
+            display: inline-block;
+            width:100%; height:100%;
+            background: lime;
+            transition: all .3s;
+            /* 
+                transform-origin: x축 [y축];
+                x축: 50%(기본값), px, left, right, center
+                y축: 50%(기본값), px, top, bottom, center
+            */
+            transform-origin: 0%;
+        }
+
+        /* transform은 블록 성격을 가진 요소에 지정한다. */
+        .sp1:hover span {transform: translateX(10px);}
+        .sp2:hover span {transform: translateY(-10px);}
+        /* translate(x위치[, y위치]) ~ 하나만 쓰면 x위치, %는 자기자신 크기 */
+        .sp3:hover span {transform: translate(50%);}
+        .sp4:hover span {transform: rotateX(80deg);}
+        .sp5:hover span {transform: rotateY(80deg);}
+        .sp6:hover span {transform: rotate(50deg);}
+        .sp7:hover span {transform: scaleX(1.1);}
+        .sp8:hover span {transform: scaleY(1.1);}
+        /* scale(가로크기[, 세로크기]) ~ 하나만 쓰면 가로/세로 같은 크기 */
+        .sp9:hover span {transform: scale(1.1);}
+        .sp10:hover span {transform: skewX(-10deg);}
+        .sp11:hover span {transform: skewY(45deg);}
+        /* skew(x각도[, y각도]) ~ 하나만 쓰면 x각도 */
+        .sp12:hover span {transform: skew(-10deg, 45deg);}
+
+        /* tranform: 값1 값2 값3 ... */
+        .sp13:hover span {transform: translateX(10px) scale(1.1);}
+    </style>
+</head>
+<body>
+    <h1>transform(변환)</h1>
+    <ul>
+        <li class="sp1"><span>translateX(x위치)</span></li>
+        <li class="sp2"><span>translateY(y위치)</span></li>
+        <li class="sp3"><span>translate(x위치[,y위치])</span></li>
+        <li class="sp4"><span>rotateX(각도deg)</span></li>
+        <li class="sp5"><span>rotateY(각도deg)</span></li>
+        <li class="sp6"><span>rotate(각도deg)</span></li>
+        <li class="sp7"><span>scaleX(가로크기)</span></li>
+        <li class="sp8"><span>scaleY(세로크기)</span></li>
+        <li class="sp9"><span>scale(가로크기,세로크기)</span></li>
+        <li class="sp10"><span>skewX(각도deg)</span></li>
+        <li class="sp11"><span>skewY(각도deg)</span></li>
+        <li class="sp12"><span>skew(x각도deg,y각도deg)</span></li>
+        <li class="sp13"><span>다중설정</span></li>
+    </ul>
+</body>
+</html>

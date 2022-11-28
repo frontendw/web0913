@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hamBtn {
+            position: absolute;
+            width:20px;
+            height:16px;
+            outline: 1px dotted red;
+        }
+        .hamBtn span {
+            position: absolute;
+            left:0;
+            top:50%;
+            width: 100%;
+            border-top:2px solid #000;
+            border-radius: 10px;
+            transition: .3s;
+        }
+        .hamBtn span:first-child {
+            top:0;
+        }
+        .hamBtn span:last-child {
+            top:100%;
+        }
+        /* x모양 만들기 */
+        .hamBtn.on span {
+            top: 50%;
+        }
+        .hamBtn.on span:nth-child(2) {
+            opacity:0;
+        }
+        .hamBtn.on span:first-child {
+            transform: rotate(45deg);
+        }
+        .hamBtn.on span:last-child {
+            transform: rotate(-45deg);
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.hamBtn').click(function(){
+                /* 
+                    addClass(클래스명) ~ 추가
+                    removeClass(클래스명) ~ 제거
+                    toggleClass(클래스명) ~ 추가/제거
+                */
+               $(this).toggleClass('on');
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#" class="hamBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+</body>
+</html>

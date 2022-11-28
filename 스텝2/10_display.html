@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .div1, .span1 {display: block;}
+        .div2, .span2 {display: inline;}
+        .div3, .span3 {display: none;}
+        .div4, .span4 {display: inline-block;}
+
+        div, span {
+            width: 150px;
+            height: 100px;
+            background: yellow;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>표시 속성</h1>
+    <p>CSS의 display 속성은 HTML 요소가 화면에 표시되는 속성으로 block, inline, inline-block, none, flex 등의 값이 있다.</p>
+
+    <h2>div 태그: 블록레벨요소의 컨테이너</h2>
+    <div class="div1">블록1</div>
+    <div class="div1">블록2</div>
+    <div class="div2">인라인1</div>
+    <div class="div2">인라인2</div>
+    <div class="div3">none</div>
+    <div class="div4">인라인블록1</div>
+    <div class="div4">인라인블록2</div>
+
+    <h2>span 태그: 인라인요소의 컨테이너</h2>
+    <span class="span1">블록1</span>
+    <span class="span1">블록2</span>
+    <span class="span2">인라인1</span>
+    <span class="span2">인라인2</span>
+    <span class="span3">none</span>
+    <span class="span4">인라인블록1</span>
+    <span class="span4">인라인블록2</span>
+</body>
+</html>

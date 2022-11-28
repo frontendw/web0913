@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2 - 프로젝트1</title>
+    <style>
+        body {margin:0;}
+        #wrap {width:300px;}
+        .container {
+            height: 300px;
+        }
+        /* 높이: header = section */
+        #header {float:left; width:100px; height:300px; background:red;}
+        #section {float:left; width:200px; height:300px; background:lightcoral;}
+        /* 너비: header + section = footer */
+        #footer {
+            /* float:left; */
+            width:300px; height:50px; background:blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 전체 콘텐츠는 왼쪽 배치 -->
+    <div id="wrap">
+        <!-- 블록레벨요소의 부모 높이는 내용 크기 -->
+        <!-- 자식이 floating 되면 부모의 높이는 0이다. -->
+        <div class="container">
+            <header id="header">헤더</header>
+            <section id="section">섹션</section>
+        </div>
+        <footer id="footer">푸터</footer>
+    </div>
+</body>
+</html>

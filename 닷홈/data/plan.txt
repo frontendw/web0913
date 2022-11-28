@@ -1,0 +1,14 @@
+반응형 사이트
+프로젝트3 ver. Mobile(Tablet, Phone) + Desktop PC
+1. 기획/분석/설계
+   - 주제: 기존 주제 또는 새 주제
+   - 자료 수집, 밴치마킹(동종/타종 사이트)
+   - 와이어프레임
+	- portfolio.bmpr, portfolio.pdf
+
+   - 시안 제작 -> 포토샵.psd 3개 -> 
+	desktop.psd, tablet.psd, phone.psd
+	desktop.jpg, tablet.jpg, phone.jpg
+2. 코드 구현
+   - 미디어쿼리와 뷰포트 설정, 단위(px, %, em, rem, ...)
+3. 테스트

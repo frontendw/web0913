@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 방법1: 직접 다운로드 -->
+    <script src="./jquery-1.12.4.min.js"></script>
+    <!-- 방법2: CDN -->
+    <!-- jQuery.com -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
+    <!-- 구글 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- 마소 -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.js"></script>
+    <!-- cdnjs.com -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- jsdelivr -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+
+
+    <script>
+        /*  shift+alt+a
+            제이쿼리는 문장 기록시 다음 2가지 사항을 반드시 수행해야 한다.
+            첫 번째는 제이쿼리 라이브러리 연결한다.
+                - 방법1: 직접 다운로드
+                - 방법2: CDN
+            두 번째는 준비(ready) 코드 작성한다. 
+        */
+        /* 
+            구문: 
+            객체.이벤트메서드(function(){실행할 내용});
+        */
+
+        /* 문서가 준비되면 함수를 실행한다. */
+        /* 문서가 준비되면 -> 웹 브라우저가 현재 html문서를 모두 읽었으면 */
+        $(document).ready(function(){
+            //실행 코드
+            alert('이것은 제이쿼리 경고창입니다.');
+        });
+
+        
+        alert('이것은 자바스크립트 경고창입니다.');
+        // 세미콜론(;)은 문장을 끝을 나타낸다.
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

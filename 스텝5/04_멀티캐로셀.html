@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .bx-wrapper {
+      box-shadow: none;
+      border: none;
+      background: none;
+    }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(function () {
+      $(".slider").bxSlider({
+        auto: true,
+        // autoControls: true,
+        stopAutoOnClick: true,
+        pager: false,
+        slideWidth: 360,
+        minSlides: 1,
+        maxSlides: 4,
+        moveSlides: 1,
+        slideMargin: 20,
+        captions: true
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="slider">
+    <div><img src="/assets/tour1.jpg" alt="동남아/대만/서남아" title="동남아/대만/서남아"></div>
+    <div><img src="/assets/tour2.jpg" alt="괌/사이판/호주/뉴질랜드" title="괌/사이판/호주/뉴질랜드"></div>
+    <div><img src="/assets/tour3.jpg" alt="유럽/아프리카" title="유럽/아프리카"></div>
+    <div><img src="/assets/tour4.jpg" alt="미주/중남미/하와이" title="미주/중남미/하와이"></div>
+    <div><img src="/assets/tour5.jpg" alt="일본" title="일본"></div>
+    <div><img src="/assets/tour6.jpg" alt="중국/홍콩/몽골/중앙아시아" title="중국/홍콩/몽골/중앙아시아"></div>
+    <div><img src="/assets/tour7.jpg" alt="제주" title="제주"></div>
+    <div><img src="/assets/tour8.jpg" alt="울릉도" title="울릉도"></div>
+  </div>
+</body>
+
+</html>

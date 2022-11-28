@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            font-size:10px;
+        }
+        .cont {
+            height: 600px;
+        }
+        
+        .parallax {
+            text-align: center;
+            height:300px;
+            line-height: 300px;
+            background: no-repeat 50% 50%/cover fixed;
+            font-size: 3.6rem;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+        .bg1 {
+            background-image: url(/assets/parallax2.jpg);
+        }
+        .bg2 {
+            background-image: url(/assets/parallax3.jpg);
+        }
+    </style>
+</head>
+<body>
+    <h1>패럴렉스 스크롤링(Parallax Scrolling)</h1>
+    <div class="cont">콘텐츠</div>
+    <section>
+        <div class="parallax bg1">
+            <h2>제목1</h2>
+        </div>
+        <div class="cont">콘텐츠</div>
+    </section>
+    <section>
+        <div class="parallax bg2">
+            <h2>제목2</h2>
+        </div>
+        <div class="cont">콘텐츠</div>
+    </section>
+</body>
+</html>

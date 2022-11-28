@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+/* 내비게이션 숨기기 */
+.gnb {
+    /* display: none; */
+    position: fixed;
+    left:0;
+    /* right: -100%; */
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(7, 30, 43, 0.8);
+    visibility: hidden;
+    opacity:0;
+<<<<<<< HEAD
+=======
+    transition: .3s;
+>>>>>>> 664708fc643006f539182622910cb4d9b1edf1d7
+}
+.gnb.on {
+    /* display:block; */
+    visibility: visible;
+    opacity:1;
+<<<<<<< HEAD
+    transition: .5s;
+=======
+>>>>>>> 664708fc643006f539182622910cb4d9b1edf1d7
+    /* right:0; */
+}
+.gnb ul {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+.gnb li {
+    margin: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #ccc;
+}
+.gnb a {
+    font-size: 4rem;
+    color: #fff;
+}
+
+/* 모바일 햄버거 버튼 */
+.hamBtn {
+    position: absolute;
+    right: 30px;
+    top: 18px;
+    width: 20px;
+    height: 16px;
+}
+.hamBtn span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    border-top: 2px solid #000;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.hamBtn span:first-child {
+    top: 0;
+}
+.hamBtn span:last-child {
+    top: 100%;
+}
+/* x모양 만들기 */
+.hamBtn.on span {
+    top: 50%;
+    border-color:#fff;
+}
+.hamBtn.on span:nth-child(2) {
+    opacity: 0;
+}
+.hamBtn.on span:first-child {
+    transform: rotate(45deg);
+}
+.hamBtn.on span:last-child {
+    transform: rotate(-45deg);
+}
+
+/**********************************************/
+/*----------------- 테블릿 -------------------*/
+/**********************************************/
+
+@media screen and (min-width: 600px) {
+
+    /* 햄버거 버튼 숨기기 */
+    .hamBtn {
+        display: none;
+    }
+    /* GNB */
+    .gnb {
+        /* display: block; */
+        visibility: visible;
+        opacity:1;
+        position: absolute;
+        left: auto;
+        right: 30px;
+        width: auto;
+        height: auto;
+        background: none;
+    }
+
+    .gnb ul {
+        display: flex;
+        position: relative;
+        top:27px;
+    }
+
+    .gnb li + li {
+        margin-left: 50px;
+    }
+    .gnb li {
+        margin: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+    .gnb a {
+        font-size: 1.6rem;
+        color: #333;
+    }
+}

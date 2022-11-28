@@ -1,0 +1,336 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+* {
+    /* padding과 border가 width와 height에 포함 */
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font: 14px/2 'Noto Sans KR', sans-serif;
+}
+
+h1 {
+    margin: 0;
+}
+
+ul {
+    /* 블릿 기호 제거 */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    /* 밑줄 제거 */
+    text-decoration: none;
+    color: #333;
+}
+
+#wrap {
+    /* 가로크기 1200이고, 가운데 배치 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+#header {
+    height: 100px;
+    padding: 35px;
+}
+
+/* 로고 */
+.logo {
+    float: left;
+    font-size: 16px;
+}
+
+/* 내비게이션 */
+.nav {
+    float: right;
+    position: relative;
+    top:10px;
+    z-index: 100;
+}
+
+/* 1depth */
+.main>li {
+    float: left;
+    width: 160px;
+    text-align: center;
+}
+
+.main>li>a {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* 메인메뉴에 호버시 하이라이트 효과 */
+.main>li>a:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* 2depth */
+.sub {
+    display: none;
+    height: 210px;
+    background: rgba(119, 119, 119, 0.461);
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+/* a요소의 글자색은 반드시 a요소에 지정해야된다!! */
+.sub a {
+    color: #fff;
+    font-size: 15px;
+    padding: 5px;
+}
+
+.sub a:hover {
+    background: #ccc;
+}
+
+
+/* 슬라이드: 페이드 효과 */
+#slide ul {
+    position: relative;
+    /* 자식이 absolute 지정되면 부모 높이가 0 */
+    height: 300px;
+}
+
+#slide li {
+    position: absolute;
+}
+
+/* slide: fade effect */
+#slide li:nth-of-type(1) {
+    animation: fade1 9s infinite;
+}
+
+#slide li:nth-of-type(2) {
+    animation: fade2 9s infinite;
+}
+
+#slide li:nth-of-type(3) {
+    animation: fade3 9s infinite;
+}
+
+@keyframes fade1 {
+    0% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    33% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    66% {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    99% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes fade2 {
+    0% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    33% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    66% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    99% {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes fade3 {
+    0% {
+        opacity: 1;
+        z-index: 0;
+    }
+
+    33% {
+        opacity: 0;
+        z-index: 0;
+    }
+
+    66% {
+        opacity: 0;
+        z-index: 1;
+    }
+
+    99% {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    100% {
+        opacity: 1;
+        z-index: 0;
+    }
+}
+
+/* 모달 팝업창 */
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+.popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    padding: 5px 25px 20px;
+    background: #fff;
+    overflow:hidden;
+}
+.popup h2 {
+    display: inline-block;
+    background: #ccc;
+}
+.popup button {
+    float:right;
+}
+
+/* 콘텐츠 */
+#contents {
+    height: 200px;
+}
+
+#contents div {
+    float: left;
+    width: 400px;
+    height: 200px;
+}
+
+/* 탭 */
+.tabs {
+    width: 400px;
+    height: 200px;
+    padding-top: 20px;
+}
+
+/* 탭버튼 */
+.tabBtn {
+    overflow: hidden;
+}
+
+.tabBtn li {
+    float: left;
+    background: #777;
+    padding: 5px 15px;
+}
+
+.tabBtn li a {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* 공지사항 */
+#tabs1 {
+    padding: 10px;
+}
+
+#tabs1 span {
+    display: inline-block;
+    width: 300px;
+    line-height: 2;
+}
+
+/* 겔러리 */
+#tabs2 {
+    display: none;
+    text-align: center;
+}
+
+#tabs2 a {
+    display: inline-block;
+    margin: 15px 5px;
+}
+
+/* 푸터 */
+#footer {
+    height: 100px;
+    /* 1줄 텍스트 일때 높이와 줄간격이 같으면 세로 가운데 배치 */
+    line-height: 100px;
+    background: #333;
+    color: #777;
+}
+
+#footer div {
+    float: left;
+}
+
+/* 하단로고 */
+.b_logo {
+    width: 200px;
+    background: url(../images/blogo.png) no-repeat right 50%;
+}
+.b_logo span {
+    display: block;
+    text-indent: -9999px;
+}
+
+/* 선택자의 우선순위 */
+/* 아이디 > 클래스 > 태그 */
+
+/* 주소 및 저작권 */
+#footer .copy {
+    width: 850px;
+    text-align: center;
+    line-height: 1;
+    margin-top:15px;
+}
+
+/* SNS */
+.sns {
+    width: 150px;
+    padding-right: 20px;
+}
+.sns a {
+    font-size: 20px;
+    margin:5px;
+    color: #ccc;
+}

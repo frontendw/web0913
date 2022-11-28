@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 클래스 선택자: .이름 */
+        /* 클래스는 하나의 HTML 문서에서 같은 값(red_txt)을 1개 이상 사용 */
+        /* 클래스는 값을 1개이상 사용 */
+
+        /* 아이디 선택자: #이름 */
+        /* 주의!!! 아이디는 하나의 HTML 문서에서 같은 값을 1개 이상 사용x */
+        /* 아이디는 값을 1개만 사용 */
+
+        /* 
+            아이디와 클래스 선택자의 이름 규칙:
+            1. 첫글자는 영문자로 또는 특수문자(_, -)
+            2. 영문의 대소 구별
+            3. 영문자와 숫자, 특수문자(_, -)의 조합
+            4. 의미를 파악 가능한 이름으로
+        */
+
+        /* 아이디가 클래스보다 우선 적용된다. */
+        #red_txt1 {color:red;}
+        #red_txt2 {color:red;}
+
+        .bg_blue {background:blue;}
+        .color_cyan {color:cyan;}
+    </style>
+</head>
+<body>
+    <h1>선택자</h1>
+    <!-- id, class 는 글로벌 속성 -->
+    <!-- id는 같은 값을 사용x -->
+    <!-- id="값" -->
+    <!-- class="값1 값2 값3 ..." -->
+    <h2 id="red_txt1" class="bg_blue color_cyan">1. 단순 선택자</h2>
+    <p id="red_txt2" class="bg_blue">요소(이름, tag, type): 태그명을 선택자로</p>
+    <p>클래스(.이름)</p>
+    <p>아이디(#)</p>
+    <p>그룹(,)</p>
+    <p>전체(*)</p>
+
+    <h2>2. 조합기 선택자</h2>
+    <p>자손(공백)</p>
+    <p>자식(>)</p>
+    <p>형제(~)</p>
+    <p>인접형제(+)</p>
+
+    <h2 class="color_cyan">3. 유사(pseudo) 클래스 선택자</h2>
+    <p>가상 클래그(:)</p>
+
+    <h2>4. 유사(pseudo) 요소 선택자</h2>
+    <p>가상 요소(::, :)</p>
+
+    <h2>5. 속성 선택자</h2>
+    <p>속성([])</p>
+</ㅠ>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            /* 초기화 */
+            html {
+                font-size: 10px;
+            }
+            body,ul {
+                margin:0;
+            }
+            ul {
+                list-style:none;
+                padding:0;
+            }
+            a {
+                text-decoration: none;
+                color:#333;
+            }
+            /* 헤더 영역 */
+            #header {
+                height: 55px;
+                background:yellow;
+            }
+            /* -------------------------------------------------- */
+
+            /* 내비게이션 숨기기 */
+            .gnb {
+                /* display: none; */
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background:rgba(0, 0, 0, 0.448);
+            }
+            .gnb ul {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+            .gnb li {
+                margin: 2rem;
+                padding-bottom: 1rem;
+                border-bottom: 1px dotted #ccc;
+            }
+            .gnb a {
+                font-size: 4rem;
+                color:#fff;
+            }
+
+            /* 모바일 햄버거 버튼 */
+            .hamBtn {
+                position: absolute;
+                right: 30px;
+                top: 17px;
+                width: 20px;
+                height: 16px;
+            }
+            .hamBtn span {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                border-top: 2px solid #000;
+                border-radius: 10px;
+                transition: 0.3s;
+            }
+            .hamBtn span:first-child {
+                top: 0;
+            }
+            .hamBtn span:last-child {
+                top: 100%;
+            }
+            /* x모양 만들기 */
+            .hamBtn.on span {
+                top: 50%;
+            }
+            .hamBtn.on span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamBtn.on span:first-child {
+                transform: rotate(45deg);
+            }
+            .hamBtn.on span:last-child {
+                transform: rotate(-45deg);
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script>
+/* 
+    효과(Effect) 메서드
+        hide() ~ 사라지기
+        show() ~ 나타나기
+        toggle() ~ 나타나기/사라지기
+
+        fadeIn() ~ 서서히 나타나기
+        fadeOut() ~ 서서히 사라지기
+        fadeToggle() ~ 서서히 나타나기/사라지기
+
+        slideDown() ~ 위에서 아래로 나타나기
+        slideUp() ~ 아래서 위로 사라지기
+        slideToggle() ~ 위/아래로 나타나기/사라지기
+
+        animate({속성:값, 속성:값, ...})
+
+    HTML/CSS 메서드
+        css({속성:값, 속성:값, ...})
+        addClass(클래스명) ~ 추가
+        removeClass(클래스명) ~ 제거
+        toggleClass(클래스명) ~ 추가/제거
+*/
+
+            $(function () {
+                $(".hamBtn").click(function () {
+                    $(this).toggleClass("on");
+                    $('.gnb').fadeToggle();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <header id="header">
+            <!-- 내비게이션 -->
+            <!-- nav.gnb>ul>li*3>a[href=#]{메뉴$} -->
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#">메뉴1</a></li>
+                    <li><a href="#">메뉴2</a></li>
+                    <li><a href="#">메뉴3</a></li>
+                </ul>
+            </nav>
+            <!-- 햄버거 버튼 -->
+            <a href="#" class="hamBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </header>
+    </body>
+</html>

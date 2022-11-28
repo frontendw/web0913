@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .li1::before {
+            content:'▶' /* 특수문자 -> 한글 자음 + 한자키 */
+        }
+        .li1::after {
+            content:'🤞🍗' /* 이모지 -> 윈+; 또는 윈+. */
+        }
+        li:nth-of-type(2)::after {
+            content:'';
+            display:inline-block;
+            /* width:4px; */
+            /* border-right:10px solid red; */
+            border-left:8px solid red;
+            border-top:5px solid transparent;
+            border-bottom:5px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <h1>유사(가상) 요소</h1>
+    <ul>
+        <li class="li1">::before(이전)</li>
+        <li>::after(이후)</li>
+    </ul>
+</body>
+</html>

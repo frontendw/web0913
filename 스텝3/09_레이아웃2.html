@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2</title>
+    <style>
+        body {margin:0;}
+        #wrap {width:300px;}
+        /* 높이: header = section + footer */
+        #header {float:left; width:100px; height:300px; background:red;}
+        /* 너비: section = footer */
+        #section {float:left; width:200px; height:250px; background:lightblue;}
+        #footer {float:left; width:200px; height:50px; background:blue;}
+    </style>
+</head>
+<body>
+    <!-- 전체 콘텐츠는 왼쪽 배치 -->
+    <div id="wrap">
+        <header id="header">헤더</header>
+        <section id="section">섹션</section>
+        <footer id="footer">푸터</footer>
+    </div>
+</body>
+</html>

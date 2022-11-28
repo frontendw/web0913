@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        select {
+            border: 1px solid red;
+            outline: none;
+            padding:5px 30px 5px 3px;
+            background:url(/assets/lst_icon.png) no-repeat 95% 0/contain;
+            appearance: none;
+        }
+        option {
+            background: #000;
+            color:white;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(()=>{
+            $('#fs').change(function(){
+                if ($(this).find('option:selected').val() === 'google') {
+                    location.href = "https://google.com";
+                }
+                if ($(this).find('option:selected').val() == 'naver') {
+                    location.href = "https://naver.com";
+                }
+            });
+        });
+
+        // window.addEventListener("DOMContentLoaded",()=>{
+        //     const sel = document.querySelector('#fs');
+        //     sel.onchange = ()=>{
+        //         if (sel.value === 'google') {
+        //             location.href = "https://google.com";
+        //         }
+        //         if (sel.value == 'naver') {
+        //             location.href = "https://naver.com";
+        //         }
+        //     }
+        // });
+    </script>
+</head>
+
+<body>
+    <select name="fs" id="fs">
+    <!-- <select name="fs" id="fs" onchange="if(this.value) window.open(this.value);"> -->
+        <option value="">패밀리사이트</option>
+        <option value="google">구글</option>
+        <option value="naver">네이버</option>
+    </select>
+</body>
+
+</html>

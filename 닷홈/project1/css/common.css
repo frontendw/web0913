@@ -1,0 +1,201 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+/* common.css */
+
+body {
+    font: 14px/2 'Noto Sans KR', sans-serif;
+}
+a {
+    color: #333;
+}
+
+#wrap {
+    /* 가로크기 1200이고, 가운데 배치 */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+#header {
+    position: relative;
+    height: 100px;
+    padding: 35px;
+    background: #54442d;
+}
+#header::after {
+    content:'';
+    border-bottom:5px solid #333;
+    position: absolute;
+    left: 0; top:100px;
+    width:100%;
+}
+#header a {
+    color: #ccc;
+}
+
+/* 로고 */
+.logo {
+    position: absolute;
+    top:45px;
+    font-size: 30px;
+    animation: logoAni2 5s ease-out infinite;
+
+}
+#header .logo a {
+    color:#F9FF12;
+    animation: logoAni 10s linear infinite;
+}
+@keyframes logoAni2 {
+    0% {top:45px; animation-timing-function: ease-out;}
+    2% {top:40px; animation-timing-function: ease-in;}
+    4% {top:45px; animation-timing-function: ease-out;}
+    6% {top:40px; animation-timing-function: ease-in;}
+    8% {top:45px; animation-timing-function: ease-out;}
+    100% {top:45px;}
+}
+
+@keyframes logoAni {
+    0% {text-shadow: 0 0 0px #F9FF12;}
+    2% {text-shadow: 0 0 5px #F9FF12;}
+    4% {text-shadow: 0 0 0px #F9FF12;}
+    6% {text-shadow: 0 0 5px #F9FF12;}
+    8% {text-shadow: 0 0 0px #F9FF12;}
+    100% {text-shadow: 0 0 0px #F9FF12;}
+}
+
+/* 내비게이션 */
+.nav {
+    position: absolute;
+    top:60px;
+    right:0;
+    z-index: 100;
+}
+
+/* 1depth */
+.main>li {
+    float: left;
+    width: 160px;
+    text-align: center;
+}
+
+.main>li>a {
+    display: block;
+    margin-bottom: 1px;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* 메인메뉴에 호버시 하이라이트 효과 */
+#header .main>li>a:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* 2depth */
+.sub {
+    display: none;
+    height: 210px;
+    background: rgba(119, 119, 119, 0.461);
+    line-height: 30px;
+    padding-top: 10px;
+}
+
+/* a요소의 글자색은 반드시 a요소에 지정해야된다!! */
+.sub a {
+    font-size: 15px;
+    padding: 5px;
+}
+
+#header .sub a:hover {
+    background: #F9FF12;
+    color:#333;
+}
+
+/* 탑메뉴 */
+.topMenu {
+   position: absolute;
+   right:35px;
+   top:10px;
+}
+.topMenu a {
+    margin:0 5px;
+}
+.topMenu a:first-of-type::after {
+    content: '|';
+    color: #ccc;
+    margin-left:10px;
+}
+
+/* 콘텐츠 */
+#contents {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+}
+#contents h2 {
+    font-size: 36px;
+}
+
+/* 푸터 */
+#footer {
+    height: 100px;
+    background: #333;
+    color: #777;
+}
+
+#footer div {
+    float: left;
+}
+
+/* 하단로고 */
+.b_logo {
+    width: 200px;
+}
+.b_logo span {
+    display: block;
+    background: url(../images/blogo.png) no-repeat right 50%;
+    text-indent: -9999px;
+    height: 100px;
+}
+
+/* 선택자의 우선순위 */
+/* 아이디 > 클래스 > 태그 */
+
+/* 주소 및 저작권 */
+#footer .copy {
+    width: 850px;
+    text-align: center;
+    line-height: 1;
+    margin-top:15px;
+}
+
+.right {
+    width: 150px;
+    padding-right: 40px;
+}
+
+/* SNS */
+.sns a {
+    display: inline-block;
+    font-size:28px;
+    margin:-3px 5px 0;
+    color: #555;
+    transition: .3s;
+}
+.sns a:hover {
+    transform: scale(1.3);
+    color:#fff;
+}
+
+/* 패밀리사이트 */
+select {
+    border: 1px solid #F9FF12;
+    outline:none;
+    padding: 2px 5px 2px 3px;
+    background: #555;
+    color: #fff;
+}
+option {
+    background: #000;
+}

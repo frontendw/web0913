@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <style>
+
+        /* 
+            text-decoration-line: none|underline|overline|line-through;
+            text-decoration-style: solid|dotted|dashed|double|wavy;
+            text-decoration-color
+            text-decoration-thickness: auto|px|%;
+
+            속기형
+            text-decoration: line1 [line2] [line3] [style] [color] [thinkness];
+        */
+        .p1 {
+            text-decoration-line: underline; /* 필수 속성 */
+            text-decoration-style: solid; /* 실선 */
+            text-decoration-color: black; /* 글자 색 */
+            text-decoration-thickness: auto; /* auto, px, % */
+
+            text-decoration: underline solid black auto;
+            text-decoration: underline;
+        }
+        .p2 {text-decoration: overline dashed red 5px;}
+        .p3 {text-decoration: line-through dotted blue 50%;} /* 글자 크기의 % */
+        .p4 {text-decoration: underline double;}
+        .p5 {text-decoration: underline wavy;}
+        .p6 {text-decoration: dotted red underline overline 50%;}
+        a {text-decoration: none;}
+    </style>
+</head>
+<body>
+    <h1>text-decoration</h1>
+    <p>text-decoration-line, text-decoration-color, text-decoration-style, text-decoration-thickness의 4가지 속성이 있다.</p>
+    <p>선 종류는 실선(solid), 대시선(dashed), 점선(dotted), 이중실선(double), 물결선(wavy)이 있다.</p>
+
+    <p class="p1">나는 밑줄(underline)이다.</p>
+    <p class="p2">나는 윗줄(overline)이다.</p>
+    <p class="p3">나는 취소선(line-through)이다.</p>
+    <a href="#">나는 밑줄을 제거(none)했다.</a>
+
+    <p class="p4">나는 double이다.</p>
+    <p class="p5">나는 wavy이다.</p>
+    <p class="p6">나는 text-decoration-line을 중복 지정했다.</p>
+</body>
+</html>

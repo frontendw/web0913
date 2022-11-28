@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        /* HTML/CSS 메서드(매개변수, ...) */        
+        /* 
+            css(): 선택한 요소에 CSS의 속성 적용!
+            css('속성', 값)
+                - 속성명 한 단어이어도 따옴표를 생략 못한다.
+
+            css({속성:값, 속성:값, ...})
+                - 속성명이 한 단어이면 따옴표를 생략 가능
+                - 속성명이 두 단어이상의 카멜 표기법으로 표기하면 생략 가능
+
+        - 문자열이면 따옴표 또는 이중따옴표로 묶는다.
+        */
+        $(document).ready(function(){
+            $('p:eq(2)').css({
+                background:'yellow', 
+                fontWeight: 700
+                // 마지막 속성 값 뒤에는 꼼마 사용하지 않는다.
+            });
+            
+            /* 메서드 체이닝 기법 */
+            $('p').eq(4).css('background', 'yellow');
+
+            /* 
+            퀴즈> 마우스를 p요소에 올리면 
+            마우스를 올린 p요소의 배경색이 red로 바뀌게 
+            마우스가 p요소를 벗어나면
+            마우스가 벗어난 p요소의 배경색이 처음 상태로 되도록 만들어 보세요.
+            */
+            /* 
+                this란 이벤트가 발생한 객체 자기자신
+                예) mouseenter 이벤트가 발생한 p요소
+            */
+
+           $('p').mouseenter(function(){
+                $(this).css({
+                    background: 'red'
+                });
+           });
+           $('p').mouseleave(function(){
+                $(this).css({
+                    background: 'white'
+                });
+           });
+        });
+    </script>
+</head>
+<body>
+    <h1>제이쿼리 선택자</h1>
+    <p>HTML 요소를 선택하고 조작하기 위해서 사용한다.</p>
+    <p>기존 CSS Selectors의 대부부을 그대로 사용하며, 일부 제이쿼리만의 선택자(:eq(n), this)가 있다.</p>
+    <p>n은 0, 1, 2, ...으로 지정한다.</p>
+    <p>달러 기호와 괄호 $()로 시작합니다.</p>
+    <p>선택자는 따옴표(') 또는 이중따옴표(")로 묶는다.</p>
+    <p>this는 자바스크립트의 예약어로 따옴표로 묶지 않는다.</p>
+    <p>참고로 순회 메소드(HTML 요소를 "찾거나 선택"하는 데 사용됩니다.)에 eq(n)가 있다.</p>
+</body>
+</html>

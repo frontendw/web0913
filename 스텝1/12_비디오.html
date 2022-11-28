@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>멀티미디어</h1>
+    <h2>비디오</h2>
+    <!-- width="320" height="240" -->
+    <video width="200" controls autoplay muted loop>
+        <source src="/assets/movie.mp4" type="video/mp4">
+        <source src="/assets/movie.webm" type="video/webm">
+        <source src="/assets/movie.ogv" type="video/ogg">
+        당신의 브라우저는 비디오 인식하지 못하고 있습니다.
+    </video>
+
+    <h2>유튜브</h2>
+    <!-- width="1280" height="720" -->
+    <!-- url?속성=값&속성=값& ... -->
+    <iframe width="200" src="https://www.youtube.com/embed/RKE6cV8RD5Q?autoplay=1&playlist=RKE6cV8RD5Q&loop=1&mute=1" allow="autoplay"></iframe>
+
+    <h2>오디오</h2>
+    <audio autoplay loop controls>
+        <source src="/assets/Alarm05.mp3" type="audio/mp3">
+        <source src="/assets/Alarm05.wav" type="audio/wav">
+        <source src="/assets/Alarm05.ogg" type="audio/ogg">
+        Your browser does not support the audio tag.
+    </audio>
+
+</body>
+
+</html>

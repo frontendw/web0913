@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 위에 제목</title>
+    <style>
+        /* 
+            1.  포지션 absolute의 left, top, right, bottom의 기준은
+                position이 relative, absolute, fixed가 지정된 가까운 조상이다.
+            2.  position이 지정된 조상이 없으면 뷰포트가 기준이 된다.
+         */
+        ul {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+        li {
+            position:relative;
+            width:360px;
+            height:240px;
+            background:yellow;
+            margin:20px;
+        }
+        h3 {
+            position:absolute; left:0px; top:0px;
+            width:150px; height:30px;
+            background:black;
+            color: white;
+            margin:0;
+        }
+    </style>
+</head>
+<body>
+    <!-- 블록레벨요소의 컨테이너(부모) -->
+    <!-- 블록레벨요소는 블록레벨요소와 인라인요소를 자식으로 가질 수 있다. -->
+    <!-- 인라인요소는 블록레벨요소를 자식으로 가질 수 없다. -->
+    <!-- ul은 li만 자식으로 가질수 있다. -->
+    <ul>
+        <li><h3>제목</h3></li>
+        <li><h3>제목</h3></li>
+    </ul>
+</body>
+</html>

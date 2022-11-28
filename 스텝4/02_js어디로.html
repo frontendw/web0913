@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 스크립트 -->
+    <script src="myScript.js"></script>
+    <script>
+        // 내부 스크립트
+    </script>
+</head>
+<body>
+    <h1 id="demo">JS를 어디에</h1>
+    <!-- 인라인 스크립트 -->
+    <!-- p요소를 클릭하면 fn()함수를 호출한다. -->
+    <p onclick="fn();">나는 인라인 스크립트로 함수를 사용했습니다. 클릭하면 글자색이 blue 로 됩니다.</p>
+    <p onclick="document.getElementById('demo').style.color = 'green';">나는 인라인 스크립트로 함수를 사용하지 않았습니다. 클릭하면 글자색이 green으로 됩니다.</p>
+
+    <!-- 외부 스크립트 -->
+    <!-- 
+        외부 자바스크립트의 장점
+            - HTML과 코드를 분리합니다.
+            - HTML 및 JavaScript를 더 쉽게 읽고 유지 관리할 수 있습니다.
+            - 캐시된 JavaScript 파일은 페이지 로드 속도를 높일 수 있습니다.
+     -->
+
+    <script src="myScript.js"></script>
+    <!-- <body> 요소의 맨 아래에 스크립트를 배치하면 디스플레이 속도가 향상됩니다. -->
+    <script>
+        /* 
+            1. 함수 정의
+            function 함수명(){ 
+                코드 블록; 
+            }
+
+            2. 함수 호출
+            함수명();
+        */
+
+        /* function는 "호출"될 때 실행할 수 있는 JavaScript 코드 블록입니다. */
+        function fn(){
+            document.getElementById('demo').style.color = 'blue';
+        }
+    </script>
+    
+</body>
+</html>

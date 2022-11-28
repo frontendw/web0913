@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            플렉스 컨테이너의 자식은 플렉스 아이템이된다.
+            display: flex;
+
+                방향에 따라 추축과 교차축이 정해진다.
+                flex-direction: row|column|row-reverse|column-reverse;
+                flex-direction: row; -> 가로가 추축, 세로가 교차축
+                flex-direction: column; -> 세로가 추축, 가로가 교차축
+               
+                justify-content: 추축 맞춤;
+                    값: flex-start, flex-end, center,
+                        space-between, space-around, space-evenly
+                align-items: 교차축 맞춤;
+                    값: stretch, flex-start, flex-end, center, baseline
+                align-content: 교차축 맞춤(두 줄 이상);
+                    값: stretch, flex-start, flex-end, center, 
+                        space-between, space-around
+                
+                flex-wrap: 줄바꿈;
+                    값: nowrap
+                flex-flow: 방향 랩;
+
+            플렉스 아이템(항목)
+                flex-grow: 늘어남;
+                flex-shrink: 줄어듬;
+                flex-basis: 초기값;
+                
+                grow와 shrink의 값이 1이면 늘어나거나 줄어든다.
+                flex: grow shrink basis;
+                    값: 0 1 auto;
+                
+                align-self: 교차축 맞춤(항목);
+                    값: stretch, flex-start, flex-end, center, baseline
+
+                숫자가 작을 수록 먼저 표시된다.
+                order: 숫자(1, 2, 3, ...);
+
+        */
+        .fxb {
+            /* 플렉스 컨테이너 */
+            display: flex;
+            outline: 1px dotted red;
+        }
+        .fxb div {
+            /* 플렉스 아이템 */
+            border: 1px solid blue;
+            padding: 10px;
+            margin: 10px;
+            /* flex: [glow] [shrink] basis; */
+            /* flex: 1 0 200px; */
+        }
+        .fxb div:nth-child(1) {align-self:flex-start; order:3; flex: 25%;}
+        .fxb div:nth-child(2) {align-self:center; order:1; flex: 50%;}
+        .fxb div:nth-child(3) {align-self:flex-end; order:2; flex: 25%;}
+
+        section {
+            background: lime;
+        }
+    </style>
+</head>
+<body>
+    <h1>플렉스박스(flexbox)</h1>
+    <div class="fxb">
+        <div><h2>1</h2></div>
+        <div><h6>2</h6></div>
+        <div><h3>3</h3></div>
+        <!-- <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+        <div><h3>7</h3></div>
+        <div><h3>8</h3></div>
+        <div><h3>9</h3></div>
+        <div><h3>10</h3></div>
+        <div><h3>11</h3></div>
+        <div><h3>12</h3></div> -->
+    </div>
+    <section>
+        <h2>나는 섹션이다.</h2>
+    </section>
+</body>
+</html>

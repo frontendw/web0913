@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* 부모 박스 초기화 */
+.bx-wrapper {
+    box-shadow: none;
+    border: none;
+    background: none;
+    margin-bottom: 0;
+}
+
+/* 이전/이후 버튼 */
+.bx-wrapper .bx-controls-direction a {
+    width: 33px;
+    height: 52px;
+    margin-top: -26px;
+}
+
+.bx-wrapper .bx-prev {
+    left: 50px;
+    background: url(../images/btn_bx_prev5.png) no-repeat;
+    transition: .7s;
+}
+
+.bx-wrapper .bx-prev:hover {
+    background: url(../images/btn_bx_prev5_hover.png) no-repeat;
+}
+
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next:focus {
+    background-position: 0 0;
+}
+
+.bx-wrapper .bx-next {
+    right: 50px;
+    background: url(../images/btn_bx_next5.png) no-repeat;
+    transition: .7s;
+}
+
+.bx-wrapper .bx-next:hover {
+    background: url(../images/btn_bx_next5_hover.png) no-repeat;
+}
+
+
+/* 인디케이터/페이저 */
+.bx-wrapper .bx-pager {
+    bottom: 25px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    width: 10px;
+    height: 10px;
+    /* 모서리 둥글게 ~ %는 자기 자신의 가로/세로 크기가 기준 */
+    border-radius: 0;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: #F9FF12;
+}

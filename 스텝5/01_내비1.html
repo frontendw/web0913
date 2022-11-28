@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        /* reset */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* nav */
+        /* 1depth */
+        .main>li {
+            float: left;
+            width: 160px;
+            text-align: center;
+        }
+        .main>li>a {
+            display: block;
+            margin-bottom: 1px;
+            font-weight: 700;
+        }
+        /* 메인메뉴에 호버시 하이라이트 효과 */
+        .main>li>a:hover {
+            background: #333;
+            color: #fff;
+        }
+
+        /* 2depth */
+        .sub {
+            display: none;
+            height: 210px;
+            background: #777;
+            line-height: 30px;
+            padding-top: 10px;
+        }
+        /* a요소의 글자색은 반드시 a요소에 지정해야된다!! */
+        .sub a {
+            color:#fff;
+            font-size: 14px;
+            padding: 5px;
+        }
+        .sub a:hover {
+            background: #ccc;
+        }
+
+    </style>
+    <script>
+        // 내부 스크립트
+        $(function () {
+            // 메인메뉴에 마우스를 올리면 서브메뉴가 슬라이드되며 나타난다.
+            $('.main > li').mouseenter(function () {
+                $('.sub').stop().slideDown();
+            });
+            // 메인메뉴에 마우스를 내리면 서브메뉴가 슬라이드되며 사라진다.
+            $('.main > li').mouseleave(function () {
+                $('.sub').stop().slideUp();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <!-- 2depth Navigation -->
+    <nav class="nav">
+        <ul class="main">
+            <li><a href="#">메인메뉴1</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴2</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴3</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">메인메뉴4</a>
+                <ul class="sub">
+                    <li><a href="#">서브메뉴1</a></li>
+                    <li><a href="#">서브메뉴2</a></li>
+                    <li><a href="#">서브메뉴3</a></li>
+                    <li><a href="#">서브메뉴4</a></li>
+                    <li><a href="#">서브메뉴5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

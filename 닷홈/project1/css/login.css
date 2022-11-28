@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+@import url('reset.css');
+@import url('common.css');
+
+.login {
+    width:480px;
+    margin: 0 auto 100px; /* 상 좌우 하 */
+}
+.login p {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.login form {
+    text-align: left;
+}
+.login input {
+    width:100%;
+    height:45px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding-left:20px;
+    font-size: 16px;
+}
+
+input::placeholder { /* 가상 요소 선택자 */
+    color:#ccc;
+}
+
+/* 속성 선택자 -> [속성], [속성=값] */
+.login input[type="checkbox"] {
+    width:auto;
+    height:auto;
+    background:yellow;
+}
+
+/* 로그인 버튼 */
+.login button {
+    width:100%;
+    background: #f0f0f0;
+    padding:15px 0;
+    font-size: 16px;
+    color:#c6c6c6;
+    border-radius: 6px;
+}
+
+/* 아이디/비밀번호 찾기 */
+.find {
+    margin: 10px 0 30px;
+}
+
+/* 회원가입 버튼 */
+.member {
+    padding:5px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow:hidden;
+}
+.member span {
+    float: left;
+}
+.member a {
+    float: right;
+}

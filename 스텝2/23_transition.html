@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+
+            transition-property: all
+            transition-duration: s(초)
+            transition-delay: s(초)
+            transition-timing-function
+
+            속기형
+            transition: [속성] 전환시간 [지연시간] [가속도];
+        */
+
+
+        div {
+            width: 100px; height:50px; background:yellow;
+
+            /* transition-property: all;
+            transition-duration: .3s;
+            transition-delay: 0s;
+            transition-timing-function: ease; */
+
+            transition:.3s;
+        }
+        div:hover {
+            height:500px;
+            background:red;
+        }
+    </style>
+</head>
+<body>
+    <h1>transition(전환)</h1>
+    <p>transition-property(속성), transition-duration(전환 시간), transition-delay(지연 시간), transition-timing-function(시간 함수 - 가속도) 속성이 있다.</p>
+    <p>ease, ease-in(점점 빨라짐), ease-out(점점 느려짐), ease-in-out, linear(등속)</p>
+    <div>박스</div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style>
+        /* 초기화 */
+        * {box-sizing: border-box;}
+        body {margin:0; font: 14px/1.5 '굴림', sans-serif;}
+        ul {list-style:none; margin:0; padding:0;}
+        a {text-decoration: none; color:#333;}
+
+        /* 임시 지정 */
+        body * {outline:1px dashed gray;}
+
+        /* 탭 */
+        .tabs {width: 400px; height:200px;}
+
+        /* 탭버튼 */
+        .tabBtn {
+            overflow:hidden;
+        }
+        .tabBtn li {
+            float:left;
+        }
+
+        /* 탭2 숨기기 */
+        #tabs2 {
+            display:none;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // 탭1 또는 탭2 버튼을 클릭하면
+            $('.tabBtn li').click(function(){
+                // 클릭한 li의 순번을 i변수에 저장
+                // 탭1을 클릭하면 0번, 탭2를 클릭하면 1번
+                var i = $(this).index();
+                $('.tabs > div').eq(i).css({display: 'block'});
+
+                /* 
+                    siblings() ~ 형제를 찾는 메서드
+                */
+               // 탭메뉴의 i번째 해당하는 div의 형제 div를 찾아 숨긴다.
+                $('.tabs > div').eq(i).siblings('div').css({display: 'none'});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="tabs">
+        <ul class="tabBtn">
+            <li><a href="#tabs1">탭1</a></li>
+            <li><a href="#tabs2">탭2</a></li>
+        </ul>
+        <div id="tabs1">
+            <p>나는 첫 번째 탭입니다.</p>
+        </div>
+        <div id="tabs2">
+            <p>나는 두 번째 탭입니다.</p>
+        </div>
+    </div>
+</body>
+
+</html>

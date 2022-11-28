@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <h1>폼(form, 양식)</h1>
+    <p>form, input, label, button 태그 등이 있다.</p>
+    
+    <h2>검색창</h2>
+    <form action="search.php">
+        <input type="search">
+        <input type="submit" value="검색">
+    </form><br>
+
+    <h2>로그인 창</h2>
+    <form action="login.php">
+        <input type="text" placeholder="아이디"><br>
+        <input type="password" placeholder="비밀번호"><br>
+
+        <input type="submit" value="로그인">
+        <input type="reset" value="로그아웃">
+        <input type="button" value="버튼">
+    </form><br>
+
+    <h2>질의문답</h2>
+    <form action="message.php">
+        <!-- for 속성값이 id 속성값과 일치 -->
+        <label for="username">이름:</label>
+        <input type="text" id="username"><br>
+        <label for="usertel">연락처:</label>
+        <input type="tel" id="usertel"><br>
+        <label for="usermail">이메일:</label>
+        <input type="email" id="usermail"><br>
+        <label for="subject">제목:</label>
+        <input type="text" id="subject"><br>
+        <label for="contents">내용:</label>
+        <input type="text" id="contents"><br>
+
+        <button type="submit">전송</button>
+        <button type="reset">초기화</button>
+        <button type="button">버튼</button>
+    </form>
+</body>
+</html>

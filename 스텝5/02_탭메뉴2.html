@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <style>
+        /* 초기화 */
+        * {box-sizing: border-box;}
+        body {margin:0; font: 14px/1.5 '굴림', sans-serif;}
+        ul {list-style:none; margin:0; padding:0;}
+        a {text-decoration: none; color:#333;}
+
+        /* 탭 */
+        .tabs {width: 400px; height:200px;}
+
+        /* 탭버튼 */
+        .tabBtn {
+            overflow:hidden;
+        }
+        .tabBtn li {
+            float:left;
+            background: #777;
+            padding: 5px 15px;
+        }
+        .tabBtn li a {
+            color: #fff;
+        }
+
+        /* 공지사항 */
+        #tabs1 {
+            padding:10px;
+        }
+        #tabs1 span {
+            display: inline-block;
+            width:300px;
+            line-height: 2;
+        }
+
+        /* 겔러리 */
+        #tabs2 {
+            display:none;
+            text-align: center;
+        }
+        #tabs2 a {
+            display:inline-block;
+            margin: 5px;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.tabBtn li').eq(0).css({background: '#000'});
+            $('.tabBtn li').click(function(){
+                $(this).css({background: '#000'}).siblings().css({background: '#777'});
+
+                var i = $(this).index();
+                $('.tabs > div').eq(i).css({display: 'block'}).siblings('div').css({display: 'none'});
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="tabs">
+        <ul class="tabBtn">
+            <li><a href="#tabs1">공지사항</a></li>
+            <li><a href="#tabs2">겔러리</a></li>
+        </ul>
+        <div id="tabs1">
+            <ul>
+                <li><a href="#"><span>2022년도 교촌에프앤비(주) 부분육(냉동)...</span>2022-09-22</a></li>
+                <li><a href="#"><span>교촌치킨 맴버십이 새로워집니다.</span>2022-09-05</a></li>
+                <li><a href="#"><span>2022년도 교촌에프앤비 부분육 구매업체...</span>2022-08-23</a></li>
+                <li><a href="#"><span>교촌치킨 신메뉴 먹으면 푸짐한 선물이...</span>2022-07-28</a></li>
+            </ul>
+        </div>
+        <div id="tabs2">
+            <a href="#"><img src="http://placeimg.com/110/100/arch" alt="더미 이미지"></a>
+            <a href="#"><img src="http://placeimg.com/110/100/nature" alt="더미 이미지"></a>
+            <a href="#"><img src="http://placeimg.com/110/100/tech" alt="더미 이미지"></a>
+        </div>
+    </div>
+</body>
+
+</html>

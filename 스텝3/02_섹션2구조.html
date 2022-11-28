@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>섹션2: 구조</title>
+    <style>
+        body {margin:0;}
+        ul {margin:0; padding:0; list-style:none;}
+
+        div {
+            width: 1500px;
+        }
+        li {
+            float: left;
+            width: 360px;
+            height: 240px;
+            background: yellow;
+            /* margin-right: 20px;
+            margin-bottom: 20px; */
+            margin: 0 20px 20px 0;
+        }
+        .margin0 {
+            margin:0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- div태그: 블록레벨요소의 컨테이너 -->
+    <div id="section2">
+        <h2>여행</h2>
+        <ul>
+            <li>이미지1</li>
+            <li>이미지2</li>
+            <li>이미지3</li>
+            <!-- 4,8번째 박스는 오른쪽 여백을 0로 -->
+            <li class="margin0">이미지4</li>
+            <li>이미지5</li>
+            <li>이미지6</li>
+            <li>이미지7</li>
+            <li class="margin0">이미지8</li>
+        </ul>
+    </div>
+</body>
+
+</html>

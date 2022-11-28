@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            조합기 선택자
+            선택자1 선택자2
+            선택자1>선택자2
+            선택자1+선택자2
+            선택자1~선택자2
+
+            1) 부모 자손(자식+손자)
+            2) 부모 > 자식 -----> 손자는 선택되지 않는다.
+            3) 형 + 인접제
+            4) 형 ~ 모든제
+        */
+
+        div p {color:red;}
+        li > p {background:yellow;}
+
+        h1 + ul {list-style:none;}
+        h1 ~ ul {border:1px solid blue;}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>조합기 선택자</h1>
+        <p>자손, 자식, 형제, 인접형제 선택자가 있다.</p>
+        <p>나는 div의 자식이다.</p>
+        <ul>
+            <li>
+                <p>나는 자손 선택자(공백)이다.</p>
+                <p>나는 div의 손자이다.</p>
+            </li>
+            <li>자식 선택자(>)</li>
+            <li>형제 선택자(~)</li>
+            <li>인접형제 선택자(+)</li>
+        </ul>
+    </div>
+
+    <h1>조합기 선택자</h1>
+    <ul>
+        <li>자손 선택자(공백)</li>
+        <li>자식 선택자(>)</li>
+        <li>형제 선택자(~)</li>
+        <li>인접형제 선택자(+)</li>
+    </ul>
+</body>
+</html>

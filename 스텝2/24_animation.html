@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            animation-name: none;
+            animation-duration: 0;
+            animation-timing-function: 시간 함수;
+                - ease
+                - ease-in
+                - ease-out
+                - ease-in-out
+                - linear
+                - cubic-bezier(n,n,n,n)
+                - steps(n)
+
+            animation-delay: 0;
+            animation-iteration-count: 숫자(1,2,..), infinite(무한 반복);
+
+            animation-direction: normal(0%->100%)|reverse|alternate|alternate-reverse;
+            animation-fill-mode: none|forwards|backwards|both;
+            animation-play-state
+
+            애니메이션의 이름 임의로 지정하고,
+            애니메이션 속성의 이름과 @keyframes의 이름이 일치해야 한다.
+
+            animation: 이름 진행시간 [가속도] [지연시연] [횟수] [방향] [채우기모드] [동작상태];
+            @keyframes 이름 {
+                from {속성:값;}
+                to {속성:값;}
+            }
+            @keyframes 이름 {
+                0% {속성:값;}
+                25% {속성:값;}
+                25.0001% {속성:값;}
+                50% {속성:값;}
+                75% {속성:값;}
+                100% {속성:값;}
+            }
+        */
+
+        /* p를 선택해서 3초 뒤에 5초 간격으로 무한 반복 bg 애니메이션을 지정 */
+        p {animation: bg 5s infinite 3s cubic-bezier(.2,.86,.86,.16);}
+
+        /* bg 애니메이션 생성: from에서 to까지 */
+        /* @keyframes bg {
+            from {background: white;}
+            to {background: red;}
+        } */
+
+        @keyframes bg {
+            0% {background: white;}
+            50% {background: red;}
+            100% {background: white;}
+        }
+
+        .cloud {
+            position:absolute;
+            left:0px; top:300px;
+            opacity:0; /* 불투명도: 0 ~ 0.5 ~ 1 사이 */
+            width: 178px;
+            height: 100px;
+            animation: cloud 3s forwards;
+        }
+        @keyframes cloud {
+            0% {left:0; opacity:0;}
+            100% {left:500px; opacity:1;}
+        }
+
+        .balloon {
+            position:absolute;
+            left:0px; top:400px;
+            width: 116px;
+            height: 160px;
+            background:url(/assets/bg-main0-5.png) no-repeat;
+            animation: balloon 3s infinite alternate;
+        }
+        @keyframes balloon {
+            0% {top:400px;}
+            100% {top:430px;}
+        }
+
+        /* 
+            프레임 수: 30개 -> steps(30)
+            전체 크기: 282 * 5610
+            하나의 크기: 282 * 187
+        */
+        .bee {
+            width: 282px;
+            height: 187px;
+            background: url('/assets/bg-main0-3-0.png') no-repeat;
+            animation: bee 3s steps(29) infinite;
+        }
+        @keyframes bee {
+            0% {background-position: 0 0;}
+            100% {background-position: 0 -5423px;}
+        }
+    </style>
+</head>
+<body>
+    <h1>animation</h1>
+    <p>속성에는 animation-name(이름), animation-duration(진행 시간), animation-timing-function(타이밍 기능), animation-delay(지연 시간), animation-iteration-count(반복 횟수), animation-direction(방향), animation-fill-mode(채우기 모드), animation-play-state(재생 상태)가 있다.</p>
+    <p>@keyframes 규칙은 애니메이션의 코드를 지정한다.</p>
+    <p>animation-timing-function은 ease, ease-in, ease-out, ease-in-out, linear, <a href="https://cubic-bezier.com/#.21,.8,.83,.16" target="_blank">cubic-bezier(n,n,n,n)</a>, steps(n) 등이 있다.</p>
+
+    <!-- 이미지로 삽입 -->
+    <div class="cloud"><img src="/assets/bg-main0-0.png" alt="구름"></div>
+    <!-- 배경이미지로 삽입 -->
+    <div class="balloon"></div>
+
+    <!-- 스프라이트(sprite) 애니메이션 -->
+    <div class="bee"></div>
+</body>
+</html>

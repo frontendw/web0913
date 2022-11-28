@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        img {
+            width: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>블록레벨요소와 인라인요소</h1>
+
+    <h2>블록레벨요소</h2>
+    <p>위에서 아래로 줄 바꿈된다.</p>
+    <p>width=100%, height=내용, margin, padding, border 속성이 모두 적용된다.</p>
+    <p>div, h1~h6, p, ul, li, form</p>
+    <div>블록1</div>
+    <div>블록2</div>
+    <div>블록3</div>
+
+    <h2>인라인요소</h2>
+    <p>줄 바꿈되지 않는다. 왼쪽에서 오른쪽 가로로 나열된다.</p>
+    <p>width, height 속성은 적용되지 않는다. (단, img, input, button는 적용된다.)</p>
+    <p>padding, border는 적용된다.</p>
+    <p>margin은 좌우만 적용된다.</p>
+    <p>span, img, a, b, i, input, button</p>
+
+    <span>스펜1</span>
+    <span>스펜2</span>
+    <img src="/assets/coffee.png" alt="커피">
+    <img src="/assets/coffee.png" alt="커피">
+    <a href="#">링크1</a>
+    <a href="#">링크2</a>
+    <input type="text">
+    <input type="text">
+    <button>버튼1</button>
+    <button>버튼2</button>
+</body>
+</html>

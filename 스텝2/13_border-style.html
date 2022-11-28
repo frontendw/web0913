@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /*
+            border:none;
+
+            border-style: none|solid(실선)|dotted(점선)|dashed(대시선)|double|
+                groove|ridge|inset|outset; (기본값: none)
+        */
+
+        /* 
+            유사(가상, 슈도) 클래스 선택자(:)
+            a:link
+            a:visited
+            선택자:hover
+            선택자:active
+
+            선택자:nth-of-type(n)
+        */
+
+        p:nth-of-type(1) {border-style:solid;}
+        p:nth-of-type(2) {border-style:dashed;}
+        p:nth-of-type(3) {border-style:dotted;}
+        p:nth-of-type(4) {border-style:double;}
+        p:nth-of-type(5) {border-style:groove;}
+        p:nth-of-type(6) {border-style:ridge;}
+        p:nth-of-type(7) {border-style:inset;}
+        p:nth-of-type(8) {border-style:outset;}
+
+    </style>
+</head>
+<body>
+    <h1>border-style</h1>
+    <p>solid</p>
+    <p>dashed</p>
+    <p>dotted</p>
+    <p>double</p>
+    <p>groove</p>
+    <p>ridge</p>
+    <p>inset</p>
+    <p>outset</p>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <style>
+        /* CDN(Content Delivery Network: 콘텐츠 전송 네트워크) */
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @font-face {
+            /* 사용자가 지정하는 폰트 이름 */
+            font-family: cherryBlossom;
+            src: url('/assets/210\ 체리블라썸B.ttf')
+        }
+        .p1 {
+            font-family: 'Nanum Pen Script', cursive;
+        }
+        .p2 {
+            font-family: cherryBlossom;
+        }
+    </style>
+</head>
+<body>
+    <h1>웹폰트</h1>
+    <!-- 구글 폰트 -->
+    <p class="p1">첫 번째 방법은 link 태그 또는 @import를 사용한다.</p>
+    <!-- 네이버 폰트 -->
+    <p class="p2">두 번째 방법은 @font-face을 사용한다.</p>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포트 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어쿼리</title>
+    <style>
+        /* 
+            @media [장치유형] and (조건) {
+                CSS 기록
+            } 
+            장치유형: screen, tv, print
+            조건: 
+                min-width(최소너비): 값, 
+                max-width(최대너비): 값, ...
+        */
+
+        /* 폰 영역 */
+        body {background-color: red;}
+
+        /* 테블릿 */
+        /* 미디어 쿼리의 중단점(breakpoint)은 600px */
+        @media screen and (min-width:600px) {
+            body {background-color: green;}
+            img {display: none;}
+        }
+
+        /* 데스크탑 */
+        @media screen and (min-width:992px) {
+            body {background-color: yellow;}
+        }
+
+    </style>
+</head>
+<body>
+    <h1>반응형 웹사이트</h1>
+    <p>미디어쿼리와 뷰포트 설정하고 단위를 %로 지정한다.</p>
+    <img src="/assets/coffee.png" alt="커피">
+</body>
+</html>

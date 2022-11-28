@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> -->
+    <style>
+        /*
+            <ul>
+            list-style-type:disc|circle|square|none;
+            <ol>
+            list-style-type:decimal|lower-alpha|upper-alpha|lower-roman|..;
+
+            list-style-position: outside|inside;
+            list-style-image: url();
+
+            속기형:
+            list-style:type|image [position];   
+        */
+        ul, ol {border:1px solid blue;}
+        li {border:1px solid red;}
+
+        ul {
+            list-style-type:disc;
+            list-style-position: outside;
+            list-style-image: none;
+
+            list-style:disc outside none;
+        }
+        .ul2 {list-style-type: circle;}
+        .ul3 {list-style-type: square;}
+        .ul4 {list-style-type: none;}
+        .ul5 {list-style-image: url('/assets/lst_icon.png');}
+
+        .ol1 {list-style-type: decimal-leading-zero;}
+        .ol2 {list-style-type: lower-alpha;}
+        .ol3 {list-style-type: upper-roman;}
+    </style>
+</head>
+<body>
+    <h1>list-style</h1>
+    <p>list-style-type, list-style-position, list-style-image의 3가지 속성이 있다.</p>
+
+    <ul class="ul1">
+        <li>목록1</li>
+        <li>목록2</li>
+    </ul>
+    <ul class="ul2">
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+    <ul class="ul3">
+        <li>목록5</li>
+        <li>목록6</li>
+    </ul>
+    <ul class="ul4">
+        <li>목록3</li>
+        <li>목록4</li>
+    </ul>
+    <ul class="ul5">
+        <li>목록5</li>
+        <li>목록6</li>
+    </ul>
+
+    <ol class="ol1">
+        <li>목록7</li>
+        <li>목록8</li>
+    </ol>
+    <ol class="ol2">
+        <li>목록9</li>
+        <li>목록10</li>
+    </ol>
+    <ol class="ol3">
+        <li>목록11</li>
+        <li>목록12</li>
+    </ol>
+</body>
+</html>

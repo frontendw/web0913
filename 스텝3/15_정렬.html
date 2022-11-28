@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정렬</title>
+    <style>
+        p {
+            /* 
+                블록레벨요소의
+                width: auto; -> 부모 가로 크기의 100%
+                height: auto; -> 내용(또는 자식 요소) 크기 
+            */
+
+            /* 블록레벨요소를 수평 가운데로 */
+            width: 700px; margin: 0 auto; 
+            
+            /* 인라인 요소를 가운데로 */
+            text-align: center;
+
+            /* 결과 확인을 위해 */
+            outline:1px dotted red;
+        }
+
+        .p1 {
+            /* 인라인 요소를 수직 가운데로 */
+            /* 텍스트의 경우 */
+            /* 높이를 지정하고, 한 줄 텍스트 일때만 가능하다. */
+            height: 100px; line-height: 100px;
+        }
+        .p2 {
+            /* 인라인 요소를 수직 가운데로 */
+            /* 이미지의 경우: line-height = 부모의 height + 이미지의 height/2 */
+            /* calc(100px + 28px / 2) 함수 사용 */
+            /* 연산자(+, -, *, /) 사이는 띄어쓰기를 한다. */
+            height: 100px; 
+            line-height: calc(100px + 28px / 2);
+        }
+        .div1 {
+            outline:1px dashed blue;
+            height: 200px;
+            /* 
+                box-sizing:content-box; (기본값)
+                -> 블록레벨요소는 패딩만큼 박스 크기가 늘어난다. 
+                box-sizing:border-box; 
+                -> 블록레벨요소는 패딩이 박스 크기에 포함된다.
+            */
+            box-sizing:border-box;
+            padding-top: 50px;
+        }
+        .p3 {
+            height: 100px; 
+            line-height: 100px;
+            background:yellow;
+        }
+
+        .div2 {
+            outline:1px solid pink;
+            /* 수직 가운데 */
+            /* 높이를 지정할 필요가 없는 경우 -> padding으로 지정한다. */
+            padding: 50px 0;
+        }
+        .p4 {
+            padding: 50px 0;
+            line-height: 2;
+        }
+
+        .div3 {
+            /* .p5의 left, top 값의 위치를 나타내는 기준이다. */
+            position: relative;
+            height: 200px;
+            border:2px solid red;
+        }
+        .p5 {
+            position: absolute;
+            /* left, top의 %는 부모 가로/세로 크기가 기준 */
+            left:50%; top:50%;
+            /* 이전 방식:
+            width:700px; height:100px;
+            margin-top: -50px;
+            margin-left: -350px; */
+            
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>정렬</h1>
+    <h2>방법1:</h2>
+    <p class="p1">텍스트는 인라인이다. text-align:center;로 수평 가운데 정렬할 수 있다.</p>
+    <!-- img은 인라인 요소이다. -->
+    <!-- img은 display:inline-block; 이므로 크기가 지정된다. -->
+    <p class="p2"><img src="/assets/lst_icon.png" alt="HTML5"></p>
+    <!-- p요소 안에 p요소는 사용하지 않는다. -->
+    <!-- div는 의미없는 요소이다. -->
+    <div class="div1">
+        <p class="p3">p는 블록레벨요소이다.</p>
+    </div>
+
+    <h2>방법2:</h2>
+    <div class="div2">
+        <p class="p4">나는 두 줄<br> 텍스트이다.</p>
+    </div>
+    
+    <h2>방법3:</h2>
+    <div class="div3">
+        <p class="p5">나는 두 줄<br> 텍스트이다.</p>
+    </div>
+
+</body>
+</html>

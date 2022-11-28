@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        .p1 {font-weight: 900;} /* 값: 100 ~ 900 */
+        .p2 {font-style: italic;} 
+        .p3 {font-size: 10px;} /* 기본 크기: 16px */
+        .p4 {line-height: 2;} /* 기본 글자 크기 * 2 = 32px */
+        .p5 {font-family: Arial, 돋움, Helvetica, sans-serif}
+        .p6 {color: red;}
+
+        .p7 {
+            font-weight: bold;
+            font-style: italic;
+            font-size: 10px;
+            line-height: 2;
+            font-family: Arial, 돋움, Helvetica, sans-serif;
+        }
+
+        /* 
+            속기형
+            font: 크기 글꼴; 
+            font: [굵기] [이탤릭] 크기[/줄간격] 글꼴; 
+            글꼴은 쉼표(,)로 구분하여 2~3개 정도 지정한다.
+        */
+        .p7 {font: bold italic 10px/2 Arial, '돋움', Dotum, Helvetica, sans-serif;}
+        .p7 {font: 10px Arial, '돋움', Helvetica, sans-serif;}
+        .p7 {font: 10px/2 Arial, '돋움', Helvetica, sans-serif;}
+        .p7 {font: bold 10px '돋움';}
+        .p7 {font: italic 10px '돋움', sans-serif;}
+    </style>
+</head>
+<body>
+    <h1>font</h1>
+    <p>텍스트의 굵기(font-weight), 이탤릭(font-style), 크기(font-size), 줄간격(line-height), 글꼴(font-family) 등의 서식을 지정하는 속성이다.</p>
+
+    <p class="p1">굵기를 bold로 지정한다.</p>
+    <p class="p2">스타일을 italic로 지정한다.</p>
+    <p class="p3">크기를 10px로 지정한다.</p>
+    <p class="p4">줄간격을 2로 지정한다.</p>
+    <p class="p5">글꼴(font-family)은 '돋움'으로 지정한다.</p>
+
+    <p class="p6">글자색을 빨강으로 지정한다.</p>
+    <p class="p7">굵기는 bold, 스타일은 italic, 크기 10px으로 줄간격 2로, 글꼴은 돋움으로 지정한다.</p>
+</body>
+</html>

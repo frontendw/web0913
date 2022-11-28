@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            특수성: 
+            https://www.w3schools.com/css/css_specificity.asp
+            https://www.w3schools.com/css/css_important.asp
+            
+            inline CSS
+            id
+            class, 유사 클래스, 속성
+            요소, 유사 요소
+        */
+        #h1 {color: blue;}
+        /* 
+            !important는 가능한 사용하지 말자!!!
+            라이브러리(개발자가 작성한 프로그램)를 사용할 때 사용할 수 있다. 
+        */
+        h1 {color:red !important;}
+        .h1 {color: cyan;}
+
+        /* 같은 선택자의 경우 더 많이 지정된 것으로 지정된다. */
+        #ol1 #li1 {color:green;}
+        #li1 {color:red;}
+
+        #ol1 .li1 {background-color:yellow;}
+        #li1 {background-color:pink;}
+
+        /* cascading -> 선택자가 같을 경우 같은 속성은 아래 내용이 지정된다. */
+        /* li {background-color:yellow;}
+        li {background-color:blue;} */
+        
+        li:nth-of-type(2) {
+            font-size:40px;
+            border:1px solid red;
+        }
+        .li2 {font-size: 20px;}
+    </style>
+</head>
+<body>
+    <h1 id="h1" class="h1" style="color:pink;">선택자의 우선순위</h1>
+    <ol id="ol1" class="ol1">
+        <li id="li1" class="li1">!important 키워드</li>
+        <li id="li2" class="li2">inline CSS</li>
+        <li>id</li>
+        <li>class, 가상 클래스, 속성</li>
+        <li>요소, 가상 요소</li>
+    </ol>
+</body>
+</html>

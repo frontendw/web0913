@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML+CSS</title>
+    <style>
+        /* 
+            #RRGGBB: 16진수(0~9, A~F), #000000(black) ~ #ffffff(white)
+            #RGB
+            rgb(0, 0, 0) ~ rgb(255, 255, 255)
+            alpha(투명도): 0(투명) ~ 1(불투명)
+            rgba(0, 0, 0, 1) ~ rgba(255, 255, 255, 1)
+
+            hsl: hue/saturation/lightness
+            hsl(0, 0%, 0%) ~ hsl(359, 100%, 100%)
+            hsla(0, 0%, 0%, 1) ~ hsla(359, 100%, 100%, 1)
+        */
+        .p1 {color:red;}
+        .p2 {color:#ff0000;}
+        .p2 {color:#f00;}
+        .p3 {color:rgba(255, 0, 0, 1);}
+
+        .p4 {color:rgb(255, 0, 0);}
+        .p5 {color:hsl(0, 100%, 50%);}
+        .p6 {color:hsla(0, 100%, 50%, 1);}
+    </style>
+</head>
+<body>
+    <h1>color</h1>
+    <p>색상은 미리 정의된 색상 이름 또는 RGB, HEX, HSL, RGBA, HSLA 값을 사용하여 지정됩니다.</p>
+
+    <p class="p1">140개 영문 키워드</p>
+    <p class="p2">HEX</p>
+    <p class="p3">RBGA</p>
+
+    <p class="p4">RGB</p>
+    <p class="p5">HSL</p>
+    <p class="p6">HSLA</p>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            border-collapse: seperate(기본값)|collapse;
+        */
+        table {
+            width: 300px;
+            border:1px solid #000;
+            border-collapse: collapse;
+            /* border-spacing: 20px; */
+            text-align: center; /* 수평 가운데 */
+        }
+        th {
+            border:1px solid #000;
+        }
+        td {
+            height:50px;
+            border:1px solid #000;
+            vertical-align: top; /* 수직 위 */
+        }
+        col:nth-of-type(1) {width:40px; background:yellow;}
+        col:nth-of-type(2) {width:140px; background:green;}
+        col:nth-of-type(3) {width:40px; background:cyan;}
+    </style>
+</head>
+<body>
+    <h1>표(table)</h1>
+    <p>table, tr(행, row), td(내용), th(열/행 제목), caption(표의 제목), col(열, column), colgroup, thead, tbody, tfoot 으로 구성된다.</p>
+    <p>span 속성은 col 태그에 사용하며, 두 개이상의 col을 묶는다.</p>
+    <p>colspan(열을 묶는다.) 또는 rowspan(행을 묶는다.)은 th 또는 td 태그에 사용하며, 두 개이상의 th 또는 td를 묶는다.</p>
+    <p>scope 속성은 th 태그에 사용하며, 머리글행/머리글열을 구분한다.</p>
+
+    <h2>3*5 표</h2>
+    <table>
+        <caption>웹 디자인 실무 평가 결과</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col span="3">
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">번호</th>
+                <th scope="col">이름</th>
+                <th scope="col">HTML</th>
+                <th scope="col">CSS</th>
+                <th scope="col">JS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>홍길동</td>
+                <td>90</td>
+                <td>70</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>김길동</td>
+                <td>100</td>
+                <td>80</td>
+                <td>50</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">평균</td>
+                <td>95</td>
+                <td>75</td>
+                <td>50</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>2*2 표</h2>
+    <table>
+        <tr>
+            <th scope="row">1행의 제목</th>
+            <td>1행2열</td>
+        </tr>
+        <tr>
+            <th scope="row">2행의 제목</th>
+            <td>2행2열</td>
+        </tr>
+    </table>
+
+    <h2>3*3 표</h2>
+    <table>
+        <tr>
+            <td colspan="2">1</td>
+            <td rowspan="2">3</td>
+        </tr>
+        <tr>
+            <td rowspan="2">4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td colspan="2">8</td>
+        </tr>
+    </table>
+</body>
+</html>

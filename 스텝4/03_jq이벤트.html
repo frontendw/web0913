@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        /* 준비 이벤트 */
+        // $(document).ready(function(){});
+        // $(function(){});
+
+        // 이벤트 -> 사건 
+        // ready, click, mouseenter, mouseleave, ...
+        /* 
+            $(document).ready(function(){});
+            $('선택자').click(function(){});
+            $("선택자").mouseenter(function(){});
+            $('선택자').mouseleave(function(){});
+        */
+        // 효과:
+        // hide(), show(), slideDown(), slideUp(), stop(), ...
+        /* 
+            $('선택자').hide();
+            $('선택자').show();
+            $('선택자').slideDown();
+            $('선택자').slideUp();
+            $('선택자').stop();
+        */
+
+        $(function(){
+            //.box1를 숨긴다.
+            $('.box1').hide();
+
+            //.box2를 클릭하면 .box2을 숨긴다.
+            $('.box2').click(function(){
+                $('.box2').hide();
+            });
+
+            //.box3를 마우스가 들어가면 .box4을 숨긴다.
+            $('.box3').mouseenter(function(){
+                $('.box4').hide();
+            });
+            //.box3를 마우스가 벗어나면 .box4을 보여준다.
+            $('.box3').mouseleave(function(){
+                $('.box4').show();
+            });
+
+            //.box5를 마우스가 들어가면 .box6을 슬라이드업된다.
+            $('.box5').mouseenter(function(){
+                $('.box6').stop().slideUp();
+            });
+            //.box5를 마우스가 벗어나면 .box6을 슬라이드다운된다.
+            $('.box5').mouseleave(function(){
+                $('.box6').stop().slideDown();
+            });
+        });
+    </script>
+    <style>
+        .box3, .box5 {
+            width:400px;
+            border:1px solid red; 
+            height:50px;
+        }
+        .box4, .box6 {
+            width:400px; 
+            background:yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>제이쿼리 이벤트</h1>
+    <p>ready, click, mouseenter, mouseleave, 등이 있다.</p>
+    <div class="box1">처음부터 사라진다.</div>
+    <div class="box2">클릭하면 사라진다.</div>
+    <div class="box3">
+        <div class="box4">마우스 올리면 숨기고, 벗어나면 보인다.</div>
+    </div>
+    <div class="box5">
+        <div class="box6">마우스 올리면 슬라이드업, 벗어나면 슬라이드다운.</div>
+    </div>
+</body>
+</html>
