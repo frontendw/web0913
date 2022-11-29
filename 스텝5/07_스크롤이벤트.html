@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin:0;}
+        ul {list-style:none; padding:0;}
+        .section {height:100vh;}
+        #section1 {background: lightblue;}
+        #section2 {
+            background: lightcoral;
+            position: relative;
+            width: 1500px;
+            margin: 0 auto;
+        }
+        .num {
+            z-index: 1;
+            position:fixed;
+            right:0;
+            top:0;
+            font-size: 3rem;
+        }
+        ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .motion {
+            position: relative;
+            top: 100%;
+            width: 360px;
+            height: 400px;
+            background: yellow;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        $(function(){
+
+            $(window).scroll(function(){
+                let wst = $(window).scrollTop(); // 창의 스크롤 탑 값
+                     $('.num').text('스크롤 량=' + wst);
+     
+                if (wst > 600) {
+                    $('.motion1').stop().animate({top: 200}, 500, 'easeOutExpo')
+                    $('.motion2').stop().animate({top: 200}, 600, 'easeOutExpo')
+                    $('.motion3').stop().animate({top: 200}, 800, 'easeOutExpo')
+                    $('.motion4').stop().animate({top: 200}, 1000, 'easeOutExpo')
+                } else {
+                    $('.motion1').stop().animate({top: 1000})
+                    $('.motion2').stop().animate({top: 2000})
+                    $('.motion3').stop().animate({top: 3000})
+                    $('.motion4').stop().animate({top: 4000})
+                }
+
+            }); // scroll()
+
+        }); // ready();
+    </script>
+</head>
+<body>
+    <div id="section1" class="section">
+        <h2>섹션1</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam perspiciatis dolorem et veritatis, officiis earum velit tempore, harum nobis illo aliquam consequatur consequuntur ipsa ratione, alias facere porro minima necessitatibus.</p>
+        <div class="num">스크롤 양이 표시되요!</div>
+    </div>
+    <div id="section2" class="section">
+        <h2>섹션2</h2>
+        <ul>
+            <li class="motion1 motion">박스1</li>
+            <li class="motion2 motion">박스2</li>
+            <li class="motion3 motion">박스3</li>
+            <li class="motion4 motion">박스4</li>
+        </ul>
+    </div>
+</body>
+</html>

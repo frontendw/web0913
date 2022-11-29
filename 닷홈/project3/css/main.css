@@ -133,6 +133,12 @@
 .bgbox1 p {
     display:none;
 }
+#section3 {
+    overflow:hidden;
+}
+#section3 li {
+    position: relative;
+}
 #section3 li h3 {
     margin: 20px 0;
 }
