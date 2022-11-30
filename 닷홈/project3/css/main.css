@@ -180,24 +180,42 @@
 }
 
 /* 푸터 */
+/* 숨긴 요소 */
+.fxb:first-child, .addr p:first-child {
+    display:none;
+}
+
 #footer {
     background: #555;
     color: #999;
     margin-top: 10px;
-    padding: 20px 0 10px;
+    padding: 20px 30px 20px;
 }
 
 .ibx {
     max-width:1500px;
     margin: 0 auto;
-    padding-left:200px;
-    background: url(../images/blogo.png) no-repeat 0 20px;
+    padding-top:40px;
+    background: url(../images/blogo.png) no-repeat 50% 0;
 }
 .fxb {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    /* justify-content: space-between; */
     align-items: center;
+    text-align: center;
 }
+.addr {
+    order: 2;
+    margin-top: 10px;
+}
+.cent {
+    order: 1;
+}
+.cent .br {
+    display: none;
+}
+
 .fxb:nth-child(1) {
     margin-bottom: 15px;
     border-bottom: 1px solid #bab3ac;
@@ -209,11 +227,6 @@
     color: #bab3ac;
 }
 
-#footer span {
-    /* 두 줄 처리 */
-    display: block;
-    margin-top: 10px;
-}
 #footer .cent a {
     font-size: 3.5rem;
 }
@@ -233,15 +246,8 @@
         justify-content: space-between;
     }
 
-    /*--------------- 섹션1 ---------------*/
-    /* #section1 h2 span:nth-child(2) {
-        display: inline-block;
-        margin-left: 15px;
-    } */
 
-    /*************************************/
     /*----------- 섹션2,3 공통 ----------*/
-    /*************************************/
     .cont ul {
         display: flex;
         flex-wrap: wrap;
@@ -264,15 +270,31 @@
         flex-direction: column;
         justify-content: space-between;
     }
-}
 
-/* min-width:600px 끝 */
+    /*-------------- 푸터 ---------------*/
+    .br {
+        display: none;
+    }
+    .ibx {
+        padding-top: 0;
+        padding-left: 200px;
+        background-position: 0% 50%;
+    }
+    .fxb {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: flex-end;
+        /* text-align: center; */
+    }
+
+} /* min-width:600px 끝 */
 
 /*********************************************/
 /*---------------- 데스크탑 -----------------*/
 /*********************************************/
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 1110px) {
 
     /* 섹션1~4 가로크기 최대 1500px */
     #section1,
@@ -297,14 +319,29 @@
     }
 
     /*-------------- 푸터 --------------*/
-    #footer span {
-        /* 한 줄 처리 */
-        display: inline-block;
-        margin: 15px;
+    /* 숨긴 요소 */
+    .addr p:first-child {
+        display:inline-block;
     }
-}
+    #footer .fxb {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+    .addr {
+        order: 1;
+        margin-top: 10px;
+    }
+    .cent {
+        order: 2;
+    }
+    .cent .br {
+        display: none;
+    }
 
-/* min-width:992px 끝 */
+} /* min-width:992px 끝 */
 
 @media screen and (min-width: 1560px) {
 
