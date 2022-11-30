@@ -181,20 +181,44 @@
 
 /* 푸터 */
 #footer {
-    height: 84px;
-    background: #111;
-    color: #fff;
-    text-align: center;
+    background: #555;
+    color: #999;
     margin-top: 10px;
-    padding-top: 20px;
+    padding: 20px 0 10px;
+}
+
+.ibx {
+    max-width:1500px;
+    margin: 0 auto;
+    padding-left:200px;
+    background: url(../images/blogo.png) no-repeat 0 20px;
+}
+.fxb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.fxb:nth-child(1) {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #bab3ac;
+}
+#footer .bnb a+a {
+    margin-left: 30px;
+}
+#footer a {
+    color: #bab3ac;
 }
 
 #footer span {
     /* 두 줄 처리 */
     display: block;
     margin-top: 10px;
-    font-size: 12px;
 }
+#footer .cent a {
+    font-size: 3.5rem;
+}
+
+
 
 /**********************************************/
 /*----------------- 테블릿 -------------------*/
